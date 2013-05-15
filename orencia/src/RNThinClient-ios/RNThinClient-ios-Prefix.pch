@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'RNThinClient-ios' target in the 'RNThinClient-ios' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

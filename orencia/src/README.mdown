@@ -1,0 +1,67 @@
+##RNThinClient-ios
+
+This project will bootstrap an existing RNThinClient-www based project for use on an iOS device. 
+
+<b>It can be cloned and forked, but only global infrastructure changes should be commited back to the master repo. NO PROJECT SPECIFICS PLEASE</b> 
+
+### Requirements
+
+- [Xcode](https://developer.apple.com/xcode/) 4.2 or above
+- [Cordova 1.9.0](https://github.com/phonegap/phonegap/zipball/1.9.0)
+- A [RNThinClient-www](https://github.com/rednucleus/RNThinClient-www) based application (has it's own seperate list of requirements).
+
+### Creating a www folder from a local stored RNThinClient-www based project
+
+You can tie the source of an RNThinClient-www project using symbolic links which can be created using the following command in Terminal (Mac OSX only):
+
+`ln -s /Path/To/RNThinClient-www/ /Path/To/RNThinClient-ios/www`
+
+After the symbolic link has been created, you can drag and drop the new linked 'www' folder into your xcode project. 
+
+### Bundle Identifier
+
+A unique Bundle Identifier needs to be chosen for each project and updated accordingly in xcode under `Project -> Targets -> RNThinClient-ios -> Bundle Identifier`
+
+### Customization
+
+You can customize some of the branding elements of the application: 
+
+#### Brand Names
+- Application Name: Change the 'CFBundleDisplayName' value in the InfoPlist.strings file found under `RNThinClient-ios/en.lproj`
+- Name under launch icon: Change the 'CFBundleName' value in the InfoPlist.strings file found under 'RNThinClient-ios/en.lproj'
+
+<strong>IMPORTANT!!</strong>
+
+TestFlight does not recognize the 'CFBundleName' value and by default will display 'RNThinClient-ios' as the application name. For now, the only way to get around this is to hard code the 'Product Name' value under `Project -> Targets -> RNThinClient-ios -> Build Settings`
+
+#### Launch Screens 
+
+Default Portrait and Landscape launch screens are included under `RNThinClient-ios/Resources/splash` for both standard and retina displays. You can add your own custom versions by saving over top of these files. Do not rename the files or commit any project specific screens back to the repository.
+
+#### Icons
+
+- Default application icons for are included under `RNThinClient-ios/Resources/splash` for both standard and retina dipslays. You can add your own custom versions by saving over the top fo theses files. Do not rename the files or commit any project specific icons back to the repository.
+
+
+### Building
+
+#### move.sh and restore.sh
+
+These two shell scripts are included in the project and are used to prepare an optimized/compressed versions of the RNThinClient-www code for testing on the device. When a build is requested, xcode will attempt to run all grunt tasks defined by the 'grunt.js' file under the RNThinClient-www project. Additionally, xcode will move all uneccesary files from the final executable to reduce filesize. When the build has completed, all moved files will be restored to their original position.
+
+<strong>Important!!</strong>
+
+- Both of these files can be modified to fit your project, but please do not commit any project specific changes.
+- The commands that call these files can be viewed under `Project -> Targets -> RNThinClient-ios -> Build Phases -> Run Script #1 and Run Script #4`
+
+#### grunt
+
+If any of the grunt tasks specified in RNThinClient-www project fail, an xcode build will also fail. Run `grunt` from the www folder and read the output if you are having issues.
+
+More information about grunt is detailed below.
+
+#### About Grunt
+
+[Grunt](https://github.com/cowboy/grunt) is an open source task-based command line build tool for JavaScript projects. It runs under [node.js](http://nodejs.org/) and is installed using [npm](http://npmjs.org/). It includes a bunch of helper tasks that help improve the javascript code your write and the final product you deliver.
+
+*If you need to install node.js, it is reccomended to add it through [homebrew](http://mxcl.github.com/homebrew/) to allow for easy updates and maintainability.*

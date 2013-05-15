@@ -1,0 +1,64 @@
+/* MAIN MENU */
+
+#topics-thumbnails {
+    height:411px;
+}
+.topic-thumb {
+    width:190px;
+    height:190px;
+}
+.topic-thumb-image {
+    width:190px;
+    height:190px;
+}
+.thumb-image-text-topic {
+    width:174px;
+}
+#thumbnail-page-wrapper {
+    height: 395px;
+}
+ul.thumbnail-pages {
+    height: 395px;
+}
+#page-indicator-container {
+    margin: 2px 0 0 0;
+}
+/* MAIN MENU END */
+
+
+/* TOPIC DETAIL */
+
+.topic-nav {
+    float:left;
+    margin-top: -45px;
+}
+
+#topic-detail-content {
+    padding-top: 45px;
+}
+
+.topic-nav-dropdown {
+    display:none;
+}
+
+.topic-nav-list {
+    display:block;
+    position:relative;
+    width:264px;
+}
+
+#topic-article-wrapper,
+#topic-resource-wrapper {
+    float:right;
+    width:760px;
+}
+
+/* TOPIC PAGE SCROLL */
+
+#thumbnail-page-scroller {
+    height: 396px;
+}
+
+ul.thumbnail-pages li.page {
+    width: 1024px;
+}

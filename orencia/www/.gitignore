@@ -1,0 +1,9 @@
+*.pwd
+.DS_Store
+*.swp
+*.mp4
+*.pdf
+assets/css/thinclient.min.css
+assets/css/*.less
+/min
+/templates/thinclient.tpl.html

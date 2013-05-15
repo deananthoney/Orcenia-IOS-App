@@ -1,0 +1,129 @@
+#topic-glossary {
+	position: absolute;
+    top:0;
+	width: 517px;
+	height: 621px;
+	background-color:#fff;
+	border-bottom: 1px solid #0a5888;
+	z-index: 2;
+	-webkit-box-shadow: -4px 4px 15px rgba(50, 50, 50, 0.35);
+	-moz-box-shadow:    -4px 4px 15px rgba(50, 50, 50, 0.35);
+	box-shadow:         -4px 4px 15px rgba(50, 50, 50, 0.35);
+	/* ie8? */	
+}
+.glossary-header {
+	background-color: #0d75b3;
+    padding-top: 5px;
+	width: 100%;
+	height: 35px;
+}
+.glossary-header span {
+	padding-left: 10px;
+    font-family: HelveticaNeueCondensedBold;
+    color: #fff;
+    font-size: 22px;
+}
+#glossary-letter-list {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	z-index: 4;
+	margin: 0;
+	padding: 7px 0 7px 0;
+	width: 40px;
+	background-color: #4ba3cb;
+}
+#glossary-letter-list li {
+	display: block;
+	height: 21px;
+	text-align: center;
+	font-family: HelveticaNeueMedium;
+    color: #1174b5;
+    font-size: 12px;
+    cursor: pointer;
+}
+#glossary-letter-list li.selected {
+    color: #fff;
+}
+#glossary-term-list-container {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	z-index: 3;
+	width: 160px;
+	height: 581px;
+	overflow: hidden;
+}
+#glossary-term-list-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 159px;
+	height: 581px;
+	background-color: #f1f0f6;
+	border-right: 1px solid #81b9d4;
+	overflow: auto;
+}
+#glossary-term-list-scroller {
+	width: 159px;
+}
+#glossary-term-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+#glossary-term-list li {
+	display: block;
+	padding: 10px 11px 10px 14px;
+	width: 134px;
+	min-height: 20px;
+    cursor: pointer;
+}
+#glossary-term-list li  span {
+	font-family: HelveticaNeueCondensedBold;
+    color: #000;
+    font-size: 14px;
+}
+.glossary-term-bg-even {
+	background-color: #e2e1e7;
+}
+.glossary-term-selected {
+	background-color: #9dcae1;
+}
+#glossary-definition {
+	position: absolute;
+	top: 40px;
+	left: 216px;
+	z-index: 2;
+	margin-top: 15px;
+	width: 290px;
+	height: 545px;
+	overflow: hidden;
+}
+#glossary-definition-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 520px;
+	overflow: hidden;
+}
+.glossary-term-content {
+	width: 100%;
+	min-height: 24px;
+}
+.glossary-term-content span {
+	font-family: HelveticaNeueCondensedBold;
+    color: #0d75b3;
+    font-size: 18px;
+}
+.glossary-content {
+	width: 95%;
+	min-height: 520px;
+}
+.glossary-content span {
+	font-family: HelveticaNeueLight;
+    color: #000;
+    font-size: 14px;
+}	
